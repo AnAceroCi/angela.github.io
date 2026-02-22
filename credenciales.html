@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angela Maria Acero Cifuentes - Credenciales Profesionales</title>
+    <title>Ángela María Acero Cifuentes - Credenciales Profesionales</title>
     <style>
         /* ============ RESET & BASE ============ */
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -184,6 +184,7 @@
             padding: 4px 12px;
             border-radius: 16px;
             font-weight: 500;
+            white-space: nowrap;
             transition: background 0.2s, color 0.2s;
         }
 
@@ -228,7 +229,7 @@
             font-weight: 500;
         }
 
-        /* Areas de enfoque - tags */
+        /* Áreas de enfoque - tags */
         .tags-container {
             display: flex;
             flex-wrap: wrap;
@@ -518,20 +519,35 @@
         }
 
         /* ============ RESPONSIVE ============ */
-        @media (max-width: 700px) {
-            .container { padding: 15px 12px 40px; }
-            .card-body { padding: 20px 16px; }
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            .container { padding: 20px 14px 50px; }
+            .card-body { padding: 22px 18px; }
+            .cv-content { padding: 28px 22px; }
+            .formation-entry { padding: 16px 18px; }
+            .card-title-row { flex-direction: column; align-items: flex-start; gap: 6px; }
+            .card-title-link { align-self: flex-start; }
+        }
+
+        /* Móvil */
+        @media (max-width: 600px) {
+            .container { padding: 12px 10px 40px; }
+            .card-body { padding: 18px 14px; }
             .card-main { flex-direction: column; align-items: center; text-align: center; }
             .card-photo { width: 120px; height: 120px; }
-            .card-info h1 { font-size: 1.25em; }
-            .card-title-row { justify-content: center; }
+            .card-info h1 { font-size: 1.2em; }
+            .card-title-row { align-items: center; }
+            .card-title-link { align-self: center; }
             .card-titles { align-items: center; }
-            .cv-content { padding: 24px 18px; }
+            .cv-content { padding: 20px 14px; }
             .competencias-grid { grid-template-columns: 1fr; }
             .cert-badges { justify-content: center; }
             .card-top-bar { text-align: center; }
             .card-top-bar h3 { text-align: center; }
-            .annex-body object { min-height: 400px; }
+            .annex-body object { min-height: 350px; }
+            .section-title { font-size: 0.95em; letter-spacing: 1px; }
+            .annexes-title { font-size: 1.1em; }
         }
 
         /* ============ PRINT ============ */
@@ -574,17 +590,17 @@
                 <h3>Capacitaciones que ofrece</h3>
                 <div class="cert-badges">
                     <span class="cert-badge">Manejo e higiene de alimentos</span>
-                    <span class="cert-badge">Buenas practicas de manufactura</span>
+                    <span class="cert-badge">Buenas prácticas de manufactura</span>
                     <span class="cert-badge">Inocuidad alimentaria</span>
                 </div>
             </div>
             <div class="card-body">
                 <div class="card-main">
                     <div class="card-photo">
-                        <img src="26.jpg.jpeg" alt="Angela Maria Acero Cifuentes">
+                        <img src="26.jpg.jpeg" alt="Ángela María Acero Cifuentes">
                     </div>
                     <div class="card-info">
-                        <h1>Angela Maria Acero Cifuentes</h1>
+                        <h1>Ángela María Acero Cifuentes</h1>
                         <p class="card-cc">CC 1012394530</p>
                         <p class="card-contact">
                             <span class="card-contact-label">Tel:</span>
@@ -602,7 +618,7 @@
                         <a href="#tarjeta-ing" class="card-title-link">Consultar Tarjeta Profesional</a>
                     </div>
                     <div class="card-title-row">
-                        <span class="card-title-name">Tecnologa en Saneamiento Ambiental</span>
+                        <span class="card-title-name">Tecnóloga en Saneamiento Ambiental</span>
                         <a href="#tarjeta-tec" class="card-title-link">Consultar Tarjeta Profesional</a>
                     </div>
                 </div>
@@ -616,44 +632,44 @@
             <div class="section">
                 <h2 class="section-title">Perfil Profesional</h2>
                 <p class="section-text">
-                    Ingeniera Sanitaria y Tecnologa en Saneamiento Ambiental con formacion academica y experiencia en <em>inocuidad alimentaria, salud publica, saneamiento basico y microbiologia aplicada a la seguridad de los alimentos</em>.
+                    Ingeniera Sanitaria y Tecnóloga en Saneamiento Ambiental con formación académica y experiencia en <em>inocuidad alimentaria, salud pública, saneamiento básico y microbiología aplicada a la seguridad de los alimentos</em>.
                 </p>
                 <p class="section-text" style="margin-top: 10px;">
-                    Con experiencia en inspeccion, vigilancia y control sanitario de establecimientos de alimentos, formulacion de planes de saneamiento basico, implementacion de Buenas Practicas de Manufactura (BPM) y capacitacion en practicas higienicas para manipuladores.
+                    Con experiencia en inspección, vigilancia y control sanitario de establecimientos de alimentos, formulación de planes de saneamiento básico, implementación de Buenas Prácticas de Manufactura (BPM) y capacitación en prácticas higiénicas para manipuladores.
                 </p>
                 <p class="section-text" style="margin-top: 10px;">
-                    Solido conocimiento en prevencion de Enfermedades Transmitidas por Alimentos (ETA), control de riesgos sanitarios y cumplimiento de normatividad sanitaria colombiana.
+                    Sólido conocimiento en prevención de Enfermedades Transmitidas por Alimentos (ETA), control de riesgos sanitarios y cumplimiento de normatividad sanitaria colombiana.
                 </p>
             </div>
 
             <!-- AREAS DE ENFOQUE -->
             <div class="section">
-                <h2 class="section-title">Areas de Enfoque</h2>
+                <h2 class="section-title">Áreas de Enfoque</h2>
                 <div class="tags-container">
-                    <span class="tag">Manipulacion higienica de alimentos</span>
-                    <span class="tag">Buenas Practicas de Manufactura (BPM)</span>
-                    <span class="tag">Salud publica</span>
-                    <span class="tag">Inspeccion, vigilancia y control sanitario</span>
-                    <span class="tag">Planes de Saneamiento Basico</span>
-                    <span class="tag">Microbiologia sanitaria aplicada</span>
-                    <span class="tag">Control de riesgos y contaminacion alimentaria</span>
-                    <span class="tag">Educacion sanitaria</span>
+                    <span class="tag">Manipulación higiénica de alimentos</span>
+                    <span class="tag">Buenas Prácticas de Manufactura (BPM)</span>
+                    <span class="tag">Salud pública</span>
+                    <span class="tag">Inspección, vigilancia y control sanitario</span>
+                    <span class="tag">Planes de Saneamiento Básico</span>
+                    <span class="tag">Microbiología sanitaria aplicada</span>
+                    <span class="tag">Control de riesgos y contaminación alimentaria</span>
+                    <span class="tag">Educación sanitaria</span>
                 </div>
             </div>
 
             <!-- EXPERIENCIA PROFESIONAL -->
             <div class="section">
-                <h2 class="section-title">Experiencia Profesional Relevante en Alimentos y Salud Publica</h2>
+                <h2 class="section-title">Experiencia Profesional Relevante en Alimentos y Salud Pública</h2>
 
                 <div class="experience-entry">
-                    <div class="exp-title">Tecnologa en Saneamiento Ambiental</div>
+                    <div class="exp-title">Tecnóloga en Saneamiento Ambiental</div>
                     <div class="exp-company">Subred Integrada de Servicios de Salud Centro Oriente E.S.E.</div>
                     <div class="exp-date">Octubre 2022 &ndash; Enero 2025</div>
                     <div class="exp-details">
-                        <div class="exp-detail-item">Inspeccion, vigilancia y control en la linea de <em>Alimentos Sanos y Seguros</em>.</div>
-                        <div class="exp-detail-item">Verificacion de cumplimiento de condiciones higienico-sanitarias en establecimientos de alimentos.</div>
-                        <div class="exp-detail-item">Aplicacion de listas de chequeo conforme a normativa sanitaria.</div>
-                        <div class="exp-detail-item">Educacion sanitaria a manipuladores de alimentos.</div>
+                        <div class="exp-detail-item">Inspección, vigilancia y control en la línea de <em>Alimentos Sanos y Seguros</em>.</div>
+                        <div class="exp-detail-item">Verificación de cumplimiento de condiciones higiénico-sanitarias en establecimientos de alimentos.</div>
+                        <div class="exp-detail-item">Aplicación de listas de chequeo conforme a normativa sanitaria.</div>
+                        <div class="exp-detail-item">Educación sanitaria a manipuladores de alimentos.</div>
                         <div class="exp-detail-item">Seguimiento a planes de mejoramiento sanitario.</div>
                     </div>
                 </div>
@@ -663,82 +679,82 @@
                     <div class="exp-company">Subred Integrada de Servicios de Salud Norte E.S.E.</div>
                     <div class="exp-date">Octubre 2021 &ndash; Agosto 2022</div>
                     <div class="exp-details">
-                        <div class="exp-detail-item">Sensibilizacion en entornos saludables.</div>
-                        <div class="exp-detail-item">Estrategias de promocion y prevencion en salud publica.</div>
-                        <div class="exp-detail-item">Educacion comunitaria en practicas higienico-sanitarias.</div>
+                        <div class="exp-detail-item">Sensibilización en entornos saludables.</div>
+                        <div class="exp-detail-item">Estrategias de promoción y prevención en salud pública.</div>
+                        <div class="exp-detail-item">Educación comunitaria en prácticas higiénico-sanitarias.</div>
                     </div>
                 </div>
 
                 <div class="experience-entry">
-                    <div class="exp-title">Formulacion de Planes de Saneamiento Basico</div>
+                    <div class="exp-title">Formulación de Planes de Saneamiento Básico</div>
                     <div class="exp-company">Independiente</div>
                     <div class="exp-date">2017 &ndash; 2019</div>
                     <div class="exp-details">
-                        <div class="exp-detail-item">Formulacion de Planes de Saneamiento Basico para restaurantes y pequenos establecimientos alimenticios.</div>
-                        <div class="exp-detail-item">Diseno de programas de limpieza y desinfeccion.</div>
-                        <div class="exp-detail-item">Planes de manejo de residuos solidos.</div>
+                        <div class="exp-detail-item">Formulación de Planes de Saneamiento Básico para restaurantes y pequeños establecimientos alimenticios.</div>
+                        <div class="exp-detail-item">Diseño de programas de limpieza y desinfección.</div>
+                        <div class="exp-detail-item">Planes de manejo de residuos sólidos.</div>
                         <div class="exp-detail-item">Programas de control integrado de plagas.</div>
-                        <div class="exp-detail-item">Asesoria para cumplimiento de requisitos sanitarios previos a visita de Secretaria de Salud.</div>
+                        <div class="exp-detail-item">Asesoría para cumplimiento de requisitos sanitarios previos a visita de Secretaría de Salud.</div>
                     </div>
                 </div>
             </div>
 
             <!-- EXPERIENCIA TECNICA COMPLEMENTARIA -->
             <div class="section">
-                <h2 class="section-title">Experiencia Tecnica Complementaria</h2>
+                <h2 class="section-title">Experiencia Técnica Complementaria</h2>
                 <p class="section-text">
-                    Experiencia en laboratorio ambiental en analisis fisicoquimicos y control de calidad, fortaleciendo competencias en:
+                    Experiencia en laboratorio ambiental en análisis fisicoquímicos y control de calidad, fortaleciendo competencias en:
                 </p>
                 <div style="margin-top: 12px;">
-                    <div class="exp-detail-item">Control microbiologico indirecto</div>
-                    <div class="exp-detail-item">Interpretacion de resultados analiticos</div>
-                    <div class="exp-detail-item">Gestion de calidad bajo lineamientos tecnicos</div>
-                    <div class="exp-detail-item">Auditorias ante IDEAM</div>
+                    <div class="exp-detail-item">Control microbiológico indirecto</div>
+                    <div class="exp-detail-item">Interpretación de resultados analíticos</div>
+                    <div class="exp-detail-item">Gestión de calidad bajo lineamientos técnicos</div>
+                    <div class="exp-detail-item">Auditorías ante IDEAM</div>
                 </div>
-                <p class="exp-note">(Fortalece el perfil tecnico y credibilidad como capacitadora).</p>
+                <p class="exp-note">(Fortalece el perfil técnico y credibilidad como capacitadora).</p>
             </div>
 
             <!-- FORMACION ACADEMICA -->
             <div class="section">
-                <h2 class="section-title">Formacion Academica</h2>
+                <h2 class="section-title">Formación Académica</h2>
 
                 <div class="formation-entry">
                     <div class="formation-degree">Ingeniera Sanitaria</div>
-                    <div class="formation-school">Universidad Distrital Francisco Jose de Caldas</div>
+                    <div class="formation-school">Universidad Distrital Francisco José de Caldas</div>
                     <div class="formation-years">2018 &ndash; 2024</div>
-                    <div class="formation-areas-title">Areas relevantes del pensum:</div>
+                    <div class="formation-areas-title">Áreas relevantes del pensum:</div>
                     <div class="formation-areas">
                         <span class="formation-area">Manejo e Higiene de Alimentos</span>
-                        <span class="formation-area">Salud Publica</span>
-                        <span class="formation-area">Microbiologia</span>
-                        <span class="formation-area">Saneamiento Basico</span>
-                        <span class="formation-area">Gestion de Residuos Solidos y Liquidos</span>
-                        <span class="formation-area">Evaluacion de Riesgos Sanitarios</span>
+                        <span class="formation-area">Salud Pública</span>
+                        <span class="formation-area">Microbiología</span>
+                        <span class="formation-area">Saneamiento Básico</span>
+                        <span class="formation-area">Gestión de Residuos Sólidos y Líquidos</span>
+                        <span class="formation-area">Evaluación de Riesgos Sanitarios</span>
                     </div>
-                    <a href="#titulo-ing" class="formation-link">Ver Titulo Profesional</a>
+                    <a href="#titulo-ing" class="formation-link">Ver Título Profesional</a>
                 </div>
 
                 <div class="formation-entry">
-                    <div class="formation-degree">Tecnologa en Saneamiento Ambiental</div>
-                    <div class="formation-school">Universidad Distrital Francisco Jose de Caldas</div>
+                    <div class="formation-degree">Tecnóloga en Saneamiento Ambiental</div>
+                    <div class="formation-school">Universidad Distrital Francisco José de Caldas</div>
                     <div class="formation-years">2012 &ndash; 2015</div>
-                    <div class="formation-areas-title">Formacion en:</div>
+                    <div class="formation-areas-title">Formación en:</div>
                     <div class="formation-areas">
-                        <span class="formation-area">Inspeccion, vigilancia y control sanitario</span>
+                        <span class="formation-area">Inspección, vigilancia y control sanitario</span>
                         <span class="formation-area">Saneamiento de establecimientos alimenticios</span>
                         <span class="formation-area">Control de factores de riesgo ambiental</span>
                         <span class="formation-area">Tratamiento de agua</span>
                     </div>
-                    <a href="#titulo-tec" class="formation-link">Ver Titulo Profesional</a>
+                    <a href="#titulo-tec" class="formation-link">Ver Título Profesional</a>
                 </div>
             </div>
 
             <!-- CAPACITACIONES -->
             <div class="section">
-                <h2 class="section-title">Capacitaciones y Actualizacion</h2>
-                <div class="capacitacion-item">Curso manejo estrategico de SECOP II</div>
-                <div class="capacitacion-item">Participacion en proyectos de investigacion ambiental</div>
-                <div class="capacitacion-item">Educacion comunitaria en salud ambiental</div>
+                <h2 class="section-title">Capacitaciones y Actualización</h2>
+                <div class="capacitacion-item">Curso manejo estratégico de SECOP II</div>
+                <div class="capacitacion-item">Participación en proyectos de investigación ambiental</div>
+                <div class="capacitacion-item">Educación comunitaria en salud ambiental</div>
             </div>
 
             <!-- COMPETENCIAS CLAVE -->
@@ -747,27 +763,27 @@
                 <div class="competencias-grid">
                     <div class="competencia-item">
                         <span class="competencia-check">&#10003;</span>
-                        Educacion y capacitacion sanitaria
+                        Educación y capacitación sanitaria
                     </div>
                     <div class="competencia-item">
                         <span class="competencia-check">&#10003;</span>
-                        Interpretacion normativa
+                        Interpretación normativa
                     </div>
                     <div class="competencia-item">
                         <span class="competencia-check">&#10003;</span>
-                        Evaluacion de condiciones higienicas
+                        Evaluación de condiciones higiénicas
                     </div>
                     <div class="competencia-item">
                         <span class="competencia-check">&#10003;</span>
-                        Elaboracion de informes tecnicos
+                        Elaboración de informes técnicos
                     </div>
                     <div class="competencia-item">
                         <span class="competencia-check">&#10003;</span>
-                        Comunicacion efectiva
+                        Comunicación efectiva
                     </div>
                     <div class="competencia-item">
                         <span class="competencia-check">&#10003;</span>
-                        Liderazgo tecnico
+                        Liderazgo técnico
                     </div>
                 </div>
             </div>
@@ -778,9 +794,9 @@
         <section class="annexes">
             <h2 class="annexes-title">Anexos &mdash; Credenciales Profesionales</h2>
 
-            <!-- T1.pdf - Titulo Ingeniera Sanitaria -->
+            <!-- T1.pdf - Título Ingeniera Sanitaria -->
             <div class="annex-card" id="titulo-ing">
-                <div class="annex-header">Titulo Profesional &mdash; Ingeniera Sanitaria</div>
+                <div class="annex-header">Título Profesional &mdash; Ingeniera Sanitaria</div>
                 <div class="annex-body">
                     <object data="T1.pdf" type="application/pdf" width="100%" height="800px">
                         <div class="annex-fallback">
@@ -804,9 +820,9 @@
                 </div>
             </div>
 
-            <!-- T2.pdf - Titulo Tecnologa (rotado 90 grados) -->
+            <!-- T2.pdf - Título Tecnóloga (rotado 90 grados) -->
             <div class="annex-card" id="titulo-tec">
-                <div class="annex-header">Titulo Profesional &mdash; Tecnologa en Saneamiento Ambiental</div>
+                <div class="annex-header">Título Profesional &mdash; Tecnóloga en Saneamiento Ambiental</div>
                 <div class="annex-body">
                     <object data="T2.pdf" type="application/pdf" width="100%" height="800px">
                         <div class="annex-fallback">
@@ -817,9 +833,9 @@
                 </div>
             </div>
 
-            <!-- tp1.pdf - Tarjeta Profesional Tecnologa -->
+            <!-- tp1.pdf - Tarjeta Profesional Tecnóloga -->
             <div class="annex-card" id="tarjeta-tec">
-                <div class="annex-header">Tarjeta Profesional &mdash; Tecnologa en Saneamiento Ambiental</div>
+                <div class="annex-header">Tarjeta Profesional &mdash; Tecnóloga en Saneamiento Ambiental</div>
                 <div class="annex-body">
                     <object data="tp1.pdf" type="application/pdf" width="100%" height="800px">
                         <div class="annex-fallback">
@@ -833,7 +849,7 @@
 
         <!-- Footer -->
         <div class="page-footer">
-            Angela Maria Acero Cifuentes &bull; Credenciales Profesionales
+            Ángela María Acero Cifuentes &bull; Credenciales Profesionales
         </div>
 
     </main>

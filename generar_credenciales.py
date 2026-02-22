@@ -121,7 +121,7 @@ def main():
         html = re.sub(pattern, pdf_sections[pdf_name], html, flags=re.DOTALL)
 
     # Escribir archivo final
-    output_file = 'credenciales_v2.html'
+    output_file = 'index.html'
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(html)
 
