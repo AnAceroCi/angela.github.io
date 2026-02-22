@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angela Maria Acero Cifuentes - Credenciales Profesionales</title>
+    <style>
+        /* ============ RESET & BASE ============ */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #F9F5FC;
+            color: #1A1A2E;
+            line-height: 1.7;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        a { color: #7D3C98; text-decoration: none; transition: color 0.2s; }
+        a:hover { color: #4A235A; text-decoration: underline; }
+
+        img { max-width: 100%; display: block; -webkit-user-drag: none; pointer-events: none; }
+
+        /* ============ WATERMARK ============ */
+        .watermark {
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            z-index: 9999;
+            pointer-events: none;
+            transform: rotate(-30deg);
+            font-size: 13px;
+            color: rgba(125, 60, 152, 0.055);
+            white-space: pre;
+            line-height: 3.2;
+            overflow: hidden;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 1px;
+        }
+
+        /* ============ CONTAINER ============ */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 20px 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ============ BUSINESS CARD ============ */
+        .business-card {
+            background: #FFFFFF;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(125, 60, 152, 0.12), 0 2px 8px rgba(0,0,0,0.06);
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .card-top-bar {
+            background: linear-gradient(135deg, #7D3C98 0%, #A569BD 50%, #7D3C98 100%);
+            padding: 16px 28px;
+        }
+
+        .card-top-bar h3 {
+            color: rgba(255,255,255,0.85);
+            font-size: 0.7em;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        .cert-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .cert-badge {
+            background: rgba(255, 255, 255, 0.18);
+            color: #FFFFFF;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.78em;
+            font-weight: 500;
+            border: 1px solid rgba(255,255,255,0.25);
+            backdrop-filter: blur(4px);
+        }
+
+        .card-body {
+            padding: 28px;
+        }
+
+        .card-main {
+            display: flex;
+            gap: 28px;
+            align-items: flex-start;
+        }
+
+        .card-photo {
+            flex-shrink: 0;
+            width: 150px;
+            height: 150px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 3px solid #D2B4DE;
+            box-shadow: 0 4px 12px rgba(125, 60, 152, 0.15);
+        }
+
+        .card-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-info { flex: 1; }
+
+        .card-info h1 {
+            font-size: 1.5em;
+            color: #1A1A2E;
+            font-weight: 700;
+            margin-bottom: 2px;
+            line-height: 1.3;
+        }
+
+        .card-cc {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .card-contact {
+            font-size: 0.88em;
+            color: #444;
+            margin-bottom: 4px;
+        }
+
+        .card-contact-label {
+            color: #7D3C98;
+            font-weight: 600;
+            margin-right: 6px;
+        }
+
+        .card-titles {
+            margin-top: 22px;
+            border-top: 1px solid #F0E1F5;
+            padding-top: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .card-title-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .card-title-name {
+            font-weight: 600;
+            color: #2D1B38;
+            font-size: 0.95em;
+        }
+
+        .card-title-link {
+            font-size: 0.82em;
+            background: #F5EEF8;
+            color: #7D3C98;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-weight: 500;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .card-title-link:hover {
+            background: #7D3C98;
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        /* ============ CV SECTIONS ============ */
+        .cv-content {
+            background: #FFFFFF;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            padding: 40px 36px;
+            margin-bottom: 40px;
+        }
+
+        .section { margin-bottom: 36px; }
+        .section:last-child { margin-bottom: 0; }
+
+        .section-title {
+            font-size: 1.1em;
+            font-weight: 700;
+            color: #4A235A;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-left: 4px solid #7D3C98;
+            padding-left: 14px;
+            margin-bottom: 18px;
+        }
+
+        .section-text {
+            font-size: 0.93em;
+            color: #333;
+            text-align: justify;
+        }
+
+        .section-text em {
+            color: #4A235A;
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        /* Areas de enfoque - tags */
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: #F5EEF8;
+            color: #4A235A;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            border: 1px solid #E8D5F0;
+        }
+
+        /* Experience timeline */
+        .experience-entry {
+            border-left: 2px solid #D2B4DE;
+            padding-left: 22px;
+            margin-left: 8px;
+            position: relative;
+            margin-bottom: 28px;
+        }
+
+        .experience-entry:last-child { margin-bottom: 0; }
+
+        .experience-entry::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 4px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #7D3C98;
+            border: 2px solid #FFFFFF;
+            box-shadow: 0 0 0 2px #D2B4DE;
+        }
+
+        .exp-title {
+            font-weight: 700;
+            color: #2D1B38;
+            font-size: 1em;
+            margin-bottom: 2px;
+        }
+
+        .exp-company {
+            font-size: 0.9em;
+            color: #7D3C98;
+            font-weight: 500;
+            font-style: italic;
+            margin-bottom: 2px;
+        }
+
+        .exp-date {
+            font-size: 0.82em;
+            color: #888;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .exp-details {
+            font-size: 0.9em;
+            color: #444;
+        }
+
+        .exp-detail-item {
+            padding: 3px 0;
+            padding-left: 14px;
+            position: relative;
+        }
+
+        .exp-detail-item::before {
+            content: '\2014';
+            position: absolute;
+            left: 0;
+            color: #A569BD;
+            font-weight: 700;
+        }
+
+        /* Formation */
+        .formation-entry {
+            background: #FDFAFF;
+            border: 1px solid #F0E1F5;
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 16px;
+        }
+
+        .formation-entry:last-child { margin-bottom: 0; }
+
+        .formation-degree {
+            font-weight: 700;
+            color: #2D1B38;
+            font-size: 1em;
+            margin-bottom: 2px;
+        }
+
+        .formation-school {
+            font-size: 0.9em;
+            color: #7D3C98;
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+
+        .formation-years {
+            font-size: 0.82em;
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        .formation-areas-title {
+            font-size: 0.82em;
+            color: #666;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .formation-areas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .formation-area {
+            background: #F0E1F5;
+            color: #4A235A;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.78em;
+            font-weight: 500;
+        }
+
+        .formation-link {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.82em;
+            background: #F5EEF8;
+            color: #7D3C98;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-weight: 500;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .formation-link:hover {
+            background: #7D3C98;
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        /* Capacitaciones */
+        .capacitacion-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #F5EEF8;
+            font-size: 0.93em;
+            color: #333;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .capacitacion-item:last-child { border-bottom: none; }
+
+        .capacitacion-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #A569BD;
+        }
+
+        /* Competencias grid */
+        .competencias-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 20px;
+        }
+
+        .competencia-item {
+            padding: 8px 0;
+            font-size: 0.9em;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .competencia-check {
+            color: #7D3C98;
+            font-weight: 700;
+            font-size: 1.1em;
+            flex-shrink: 0;
+        }
+
+        /* Complementary experience note */
+        .exp-note {
+            font-size: 0.82em;
+            color: #888;
+            font-style: italic;
+            margin-top: 8px;
+        }
+
+        /* ============ ANNEXES ============ */
+        .annexes {
+            margin-bottom: 40px;
+        }
+
+        .annexes-title {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #4A235A;
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #D2B4DE;
+        }
+
+        .annex-card {
+            background: #FFFFFF;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .annex-header {
+            background: linear-gradient(135deg, #4A235A, #7D3C98);
+            color: #FFFFFF;
+            padding: 14px 24px;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+
+        .annex-body {
+            padding: 0;
+            background: #F8F4FA;
+            min-height: 200px;
+        }
+
+        .annex-body object {
+            display: block;
+            width: 100%;
+            min-height: 700px;
+            border: none;
+        }
+
+        .annex-body img {
+            width: 100%;
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        .annex-fallback {
+            padding: 30px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .annex-fallback a {
+            display: inline-block;
+            margin-top: 10px;
+            background: #7D3C98;
+            color: #FFF;
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        .annex-fallback a:hover {
+            background: #4A235A;
+            text-decoration: none;
+        }
+
+        /* ============ FOOTER ============ */
+        .page-footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.78em;
+            color: #999;
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 700px) {
+            .container { padding: 15px 12px 40px; }
+            .card-body { padding: 20px 16px; }
+            .card-main { flex-direction: column; align-items: center; text-align: center; }
+            .card-photo { width: 120px; height: 120px; }
+            .card-info h1 { font-size: 1.25em; }
+            .card-title-row { justify-content: center; }
+            .card-titles { align-items: center; }
+            .cv-content { padding: 24px 18px; }
+            .competencias-grid { grid-template-columns: 1fr; }
+            .cert-badges { justify-content: center; }
+            .card-top-bar { text-align: center; }
+            .card-top-bar h3 { text-align: center; }
+            .annex-body object { min-height: 400px; }
+        }
+
+        /* ============ PRINT ============ */
+        @media print {
+            body { background: #FFF; }
+            .watermark { opacity: 0.04; }
+            .container { max-width: 100%; padding: 10px; }
+            .business-card, .cv-content, .annex-card { box-shadow: none; break-inside: avoid; }
+            .annex-card { page-break-before: always; }
+            a[href]::after { content: " (" attr(href) ")"; font-size: 0.8em; color: #888; }
+            a[href^="#"]::after { content: ""; }
+        }
+
+        /* ============ SECURITY OVERLAY ============ */
+        .no-copy-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9998;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Watermark -->
+    <div class="watermark" id="watermark" aria-hidden="true"></div>
+
+    <!-- Security overlay -->
+    <div class="no-copy-overlay" aria-hidden="true"></div>
+
+    <!-- Main content -->
+    <main class="container">
+
+        <!-- ========== BUSINESS CARD ========== -->
+        <section class="business-card">
+            <div class="card-top-bar">
+                <h3>Capacitaciones que ofrece</h3>
+                <div class="cert-badges">
+                    <span class="cert-badge">Manejo e higiene de alimentos</span>
+                    <span class="cert-badge">Buenas practicas de manufactura</span>
+                    <span class="cert-badge">Inocuidad alimentaria</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="card-main">
+                    <div class="card-photo">
+                        <img src="26.jpg.jpeg" alt="Angela Maria Acero Cifuentes">
+                    </div>
+                    <div class="card-info">
+                        <h1>Angela Maria Acero Cifuentes</h1>
+                        <p class="card-cc">CC 1012394530</p>
+                        <p class="card-contact">
+                            <span class="card-contact-label">Tel:</span>
+                            +57 314 270 15 55
+                        </p>
+                        <p class="card-contact">
+                            <span class="card-contact-label">Correo:</span>
+                            <a href="mailto:anmaci.19@gmail.com" style="pointer-events: auto;">anmaci.19@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-titles">
+                    <div class="card-title-row">
+                        <span class="card-title-name">Ingeniera Sanitaria</span>
+                        <a href="#tarjeta-ing" class="card-title-link">Consultar Tarjeta Profesional</a>
+                    </div>
+                    <div class="card-title-row">
+                        <span class="card-title-name">Tecnologa en Saneamiento Ambiental</span>
+                        <a href="#tarjeta-tec" class="card-title-link">Consultar Tarjeta Profesional</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== HOJA DE VIDA ========== -->
+        <section class="cv-content">
+
+            <!-- PERFIL PROFESIONAL -->
+            <div class="section">
+                <h2 class="section-title">Perfil Profesional</h2>
+                <p class="section-text">
+                    Ingeniera Sanitaria y Tecnologa en Saneamiento Ambiental con formacion academica y experiencia en <em>inocuidad alimentaria, salud publica, saneamiento basico y microbiologia aplicada a la seguridad de los alimentos</em>.
+                </p>
+                <p class="section-text" style="margin-top: 10px;">
+                    Con experiencia en inspeccion, vigilancia y control sanitario de establecimientos de alimentos, formulacion de planes de saneamiento basico, implementacion de Buenas Practicas de Manufactura (BPM) y capacitacion en practicas higienicas para manipuladores.
+                </p>
+                <p class="section-text" style="margin-top: 10px;">
+                    Solido conocimiento en prevencion de Enfermedades Transmitidas por Alimentos (ETA), control de riesgos sanitarios y cumplimiento de normatividad sanitaria colombiana.
+                </p>
+            </div>
+
+            <!-- AREAS DE ENFOQUE -->
+            <div class="section">
+                <h2 class="section-title">Areas de Enfoque</h2>
+                <div class="tags-container">
+                    <span class="tag">Manipulacion higienica de alimentos</span>
+                    <span class="tag">Buenas Practicas de Manufactura (BPM)</span>
+                    <span class="tag">Salud publica</span>
+                    <span class="tag">Inspeccion, vigilancia y control sanitario</span>
+                    <span class="tag">Planes de Saneamiento Basico</span>
+                    <span class="tag">Microbiologia sanitaria aplicada</span>
+                    <span class="tag">Control de riesgos y contaminacion alimentaria</span>
+                    <span class="tag">Educacion sanitaria</span>
+                </div>
+            </div>
+
+            <!-- EXPERIENCIA PROFESIONAL -->
+            <div class="section">
+                <h2 class="section-title">Experiencia Profesional Relevante en Alimentos y Salud Publica</h2>
+
+                <div class="experience-entry">
+                    <div class="exp-title">Tecnologa en Saneamiento Ambiental</div>
+                    <div class="exp-company">Subred Integrada de Servicios de Salud Centro Oriente E.S.E.</div>
+                    <div class="exp-date">Octubre 2022 &ndash; Enero 2025</div>
+                    <div class="exp-details">
+                        <div class="exp-detail-item">Inspeccion, vigilancia y control en la linea de <em>Alimentos Sanos y Seguros</em>.</div>
+                        <div class="exp-detail-item">Verificacion de cumplimiento de condiciones higienico-sanitarias en establecimientos de alimentos.</div>
+                        <div class="exp-detail-item">Aplicacion de listas de chequeo conforme a normativa sanitaria.</div>
+                        <div class="exp-detail-item">Educacion sanitaria a manipuladores de alimentos.</div>
+                        <div class="exp-detail-item">Seguimiento a planes de mejoramiento sanitario.</div>
+                    </div>
+                </div>
+
+                <div class="experience-entry">
+                    <div class="exp-title">Saneamiento Ambiental</div>
+                    <div class="exp-company">Subred Integrada de Servicios de Salud Norte E.S.E.</div>
+                    <div class="exp-date">Octubre 2021 &ndash; Agosto 2022</div>
+                    <div class="exp-details">
+                        <div class="exp-detail-item">Sensibilizacion en entornos saludables.</div>
+                        <div class="exp-detail-item">Estrategias de promocion y prevencion en salud publica.</div>
+                        <div class="exp-detail-item">Educacion comunitaria en practicas higienico-sanitarias.</div>
+                    </div>
+                </div>
+
+                <div class="experience-entry">
+                    <div class="exp-title">Formulacion de Planes de Saneamiento Basico</div>
+                    <div class="exp-company">Independiente</div>
+                    <div class="exp-date">2017 &ndash; 2019</div>
+                    <div class="exp-details">
+                        <div class="exp-detail-item">Formulacion de Planes de Saneamiento Basico para restaurantes y pequenos establecimientos alimenticios.</div>
+                        <div class="exp-detail-item">Diseno de programas de limpieza y desinfeccion.</div>
+                        <div class="exp-detail-item">Planes de manejo de residuos solidos.</div>
+                        <div class="exp-detail-item">Programas de control integrado de plagas.</div>
+                        <div class="exp-detail-item">Asesoria para cumplimiento de requisitos sanitarios previos a visita de Secretaria de Salud.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EXPERIENCIA TECNICA COMPLEMENTARIA -->
+            <div class="section">
+                <h2 class="section-title">Experiencia Tecnica Complementaria</h2>
+                <p class="section-text">
+                    Experiencia en laboratorio ambiental en analisis fisicoquimicos y control de calidad, fortaleciendo competencias en:
+                </p>
+                <div style="margin-top: 12px;">
+                    <div class="exp-detail-item">Control microbiologico indirecto</div>
+                    <div class="exp-detail-item">Interpretacion de resultados analiticos</div>
+                    <div class="exp-detail-item">Gestion de calidad bajo lineamientos tecnicos</div>
+                    <div class="exp-detail-item">Auditorias ante IDEAM</div>
+                </div>
+                <p class="exp-note">(Fortalece el perfil tecnico y credibilidad como capacitadora).</p>
+            </div>
+
+            <!-- FORMACION ACADEMICA -->
+            <div class="section">
+                <h2 class="section-title">Formacion Academica</h2>
+
+                <div class="formation-entry">
+                    <div class="formation-degree">Ingeniera Sanitaria</div>
+                    <div class="formation-school">Universidad Distrital Francisco Jose de Caldas</div>
+                    <div class="formation-years">2018 &ndash; 2024</div>
+                    <div class="formation-areas-title">Areas relevantes del pensum:</div>
+                    <div class="formation-areas">
+                        <span class="formation-area">Manejo e Higiene de Alimentos</span>
+                        <span class="formation-area">Salud Publica</span>
+                        <span class="formation-area">Microbiologia</span>
+                        <span class="formation-area">Saneamiento Basico</span>
+                        <span class="formation-area">Gestion de Residuos Solidos y Liquidos</span>
+                        <span class="formation-area">Evaluacion de Riesgos Sanitarios</span>
+                    </div>
+                    <a href="#titulo-ing" class="formation-link">Ver Titulo Profesional</a>
+                </div>
+
+                <div class="formation-entry">
+                    <div class="formation-degree">Tecnologa en Saneamiento Ambiental</div>
+                    <div class="formation-school">Universidad Distrital Francisco Jose de Caldas</div>
+                    <div class="formation-years">2012 &ndash; 2015</div>
+                    <div class="formation-areas-title">Formacion en:</div>
+                    <div class="formation-areas">
+                        <span class="formation-area">Inspeccion, vigilancia y control sanitario</span>
+                        <span class="formation-area">Saneamiento de establecimientos alimenticios</span>
+                        <span class="formation-area">Control de factores de riesgo ambiental</span>
+                        <span class="formation-area">Tratamiento de agua</span>
+                    </div>
+                    <a href="#titulo-tec" class="formation-link">Ver Titulo Profesional</a>
+                </div>
+            </div>
+
+            <!-- CAPACITACIONES -->
+            <div class="section">
+                <h2 class="section-title">Capacitaciones y Actualizacion</h2>
+                <div class="capacitacion-item">Curso manejo estrategico de SECOP II</div>
+                <div class="capacitacion-item">Participacion en proyectos de investigacion ambiental</div>
+                <div class="capacitacion-item">Educacion comunitaria en salud ambiental</div>
+            </div>
+
+            <!-- COMPETENCIAS CLAVE -->
+            <div class="section">
+                <h2 class="section-title">Competencias Clave</h2>
+                <div class="competencias-grid">
+                    <div class="competencia-item">
+                        <span class="competencia-check">&#10003;</span>
+                        Educacion y capacitacion sanitaria
+                    </div>
+                    <div class="competencia-item">
+                        <span class="competencia-check">&#10003;</span>
+                        Interpretacion normativa
+                    </div>
+                    <div class="competencia-item">
+                        <span class="competencia-check">&#10003;</span>
+                        Evaluacion de condiciones higienicas
+                    </div>
+                    <div class="competencia-item">
+                        <span class="competencia-check">&#10003;</span>
+                        Elaboracion de informes tecnicos
+                    </div>
+                    <div class="competencia-item">
+                        <span class="competencia-check">&#10003;</span>
+                        Comunicacion efectiva
+                    </div>
+                    <div class="competencia-item">
+                        <span class="competencia-check">&#10003;</span>
+                        Liderazgo tecnico
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ========== ANEXOS ========== -->
+        <section class="annexes">
+            <h2 class="annexes-title">Anexos &mdash; Credenciales Profesionales</h2>
+
+            <!-- T1.pdf - Titulo Ingeniera Sanitaria -->
+            <div class="annex-card" id="titulo-ing">
+                <div class="annex-header">Titulo Profesional &mdash; Ingeniera Sanitaria</div>
+                <div class="annex-body">
+                    <object data="T1.pdf" type="application/pdf" width="100%" height="800px">
+                        <div class="annex-fallback">
+                            <p>No se puede visualizar el documento PDF en este navegador.</p>
+                            <a href="T1.pdf">Descargar documento</a>
+                        </div>
+                    </object>
+                </div>
+            </div>
+
+            <!-- tp2.pdf - Tarjeta Profesional Ingeniera Sanitaria -->
+            <div class="annex-card" id="tarjeta-ing">
+                <div class="annex-header">Tarjeta Profesional &mdash; Ingeniera Sanitaria</div>
+                <div class="annex-body">
+                    <object data="tp2.pdf" type="application/pdf" width="100%" height="800px">
+                        <div class="annex-fallback">
+                            <p>No se puede visualizar el documento PDF en este navegador.</p>
+                            <a href="tp2.pdf">Descargar documento</a>
+                        </div>
+                    </object>
+                </div>
+            </div>
+
+            <!-- T2.pdf - Titulo Tecnologa (rotado 90 grados) -->
+            <div class="annex-card" id="titulo-tec">
+                <div class="annex-header">Titulo Profesional &mdash; Tecnologa en Saneamiento Ambiental</div>
+                <div class="annex-body">
+                    <object data="T2.pdf" type="application/pdf" width="100%" height="800px">
+                        <div class="annex-fallback">
+                            <p>No se puede visualizar el documento PDF en este navegador.</p>
+                            <a href="T2.pdf">Descargar documento</a>
+                        </div>
+                    </object>
+                </div>
+            </div>
+
+            <!-- tp1.pdf - Tarjeta Profesional Tecnologa -->
+            <div class="annex-card" id="tarjeta-tec">
+                <div class="annex-header">Tarjeta Profesional &mdash; Tecnologa en Saneamiento Ambiental</div>
+                <div class="annex-body">
+                    <object data="tp1.pdf" type="application/pdf" width="100%" height="800px">
+                        <div class="annex-fallback">
+                            <p>No se puede visualizar el documento PDF en este navegador.</p>
+                            <a href="tp1.pdf">Descargar documento</a>
+                        </div>
+                    </object>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <div class="page-footer">
+            Angela Maria Acero Cifuentes &bull; Credenciales Profesionales
+        </div>
+
+    </main>
+
+    <!-- ============ SECURITY & WATERMARK SCRIPTS ============ -->
+    <script>
+    (function() {
+        'use strict';
+
+        // === WATERMARK GENERATION ===
+        var wm = document.getElementById('watermark');
+        if (wm) {
+            var email = 'anmaci.19@gmail.com';
+            var tab = '\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0';
+            var sep = tab + tab;
+            var segment = email + sep + email + sep + email + sep + email + sep + email + sep;
+            var lines = [];
+            for (var i = 0; i < 90; i++) {
+                lines.push(segment);
+            }
+            wm.textContent = lines.join('\n');
+        }
+
+        // === DISABLE RIGHT CLICK ===
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        });
+
+        // === DISABLE KEYBOARD SHORTCUTS ===
+        document.addEventListener('keydown', function(e) {
+            // Ctrl+C, Ctrl+X (copy/cut)
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X')) {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+U (view source)
+            if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+S (save page)
+            if (e.ctrlKey && (e.key === 's' || e.key === 'S')) {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+P (print)
+            if (e.ctrlKey && (e.key === 'p' || e.key === 'P')) {
+                e.preventDefault();
+                return false;
+            }
+            // F12 (dev tools)
+            if (e.key === 'F12') {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+Shift+I (dev tools)
+            if (e.ctrlKey && e.shiftKey && (e.key === 'i' || e.key === 'I')) {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+Shift+J (console)
+            if (e.ctrlKey && e.shiftKey && (e.key === 'j' || e.key === 'J')) {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+Shift+C (inspect element)
+            if (e.ctrlKey && e.shiftKey && (e.key === 'c' || e.key === 'C')) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // === DISABLE DRAG ===
+        document.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+            return false;
+        });
+
+        // === DISABLE TEXT SELECTION (backup) ===
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+            return false;
+        });
+
+        // === DEVTOOLS DETECTION (basic) ===
+        var devToolsThreshold = 160;
+        function checkDevTools() {
+            if (window.outerWidth - window.innerWidth > devToolsThreshold ||
+                window.outerHeight - window.innerHeight > devToolsThreshold) {
+                document.body.style.filter = 'blur(8px)';
+                document.body.style.pointerEvents = 'none';
+            } else {
+                document.body.style.filter = '';
+                document.body.style.pointerEvents = '';
+            }
+        }
+        setInterval(checkDevTools, 1000);
+
+        // Disable console methods (basic deterrent)
+        try {
+            Object.defineProperty(window, 'console', {
+                get: function() {
+                    return {
+                        log: function(){},
+                        warn: function(){},
+                        error: function(){},
+                        info: function(){},
+                        debug: function(){}
+                    };
+                },
+                set: function(){}
+            });
+        } catch(e) {}
+
+    })();
+    </script>
+
+</body>
+</html>
